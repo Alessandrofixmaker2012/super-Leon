@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Music</title>
-    <style>
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0px;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
     <h1>Welcome to our Free Music Website!</h1>
-    <a href="sign-in.html" class="button">Sign In</a>
+    <button id="signInButton" class="button">Sign In</button>
+
+    <script>
+        document.getElementById('signInButton').addEventListener('click', function() {
+            // Open the new page in a new window
+            window.open('signed-in.html', '_blank');
+
+            // Update the original window with a success message
+            document.body.innerHTML = '<h1>Signed in successfully!</h1>';
+        });
+    </script>
 </body>
 </html>
